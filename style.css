@@ -1,0 +1,116 @@
+:root {
+  --board-font: "Finger Paint", cursive;
+  --primary-font: sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  color: white;
+  transition: 0.2s ease-in-out;
+  user-select: none;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--primary-font);
+  background-color: #252a34;
+  width: 100vw;
+  text-align: center;
+  padding-top: 5vh;
+}
+
+.align {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#dark-light-icon {
+  position: absolute;
+  top: 4%;
+  right: 3%;
+  width: 32px;
+  cursor: pointer;
+}
+
+.turn-container {
+  width: 170px;
+  height: 80px;
+  /* background-color: red; */
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  position: relative;
+  font-family: var(--board-font);
+}
+
+.turn-container h3 {
+  font-size: 1.4rem;
+  font-family: var(--primary-font);
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.turn-container .turn-box {
+  /* background-color: rgb(1, 62, 64); */
+  border: 3px solid white;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.turn-container .turn-box:nth-child(even) {
+  border-right: none;
+}
+
+.bg {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: #ff2e63;
+  height: 40px;
+  width: 85px;
+  z-index: -1;
+}
+
+#game-board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  height: 275px;
+  width: 275px;
+  margin: 55px auto;
+  font-family: var(--board-font);
+  /* border: 2px solid white; */
+}
+
+.box {
+  cursor: pointer;
+  font-size: 3.5rem;
+  border-right: 4px solid white;
+  border-bottom: 4px solid white;
+  font-weight: 700;
+}
+
+.box:nth-child(3n) {
+  border-right: none;
+}
+
+.box:nth-child(6) ~ .box {
+  border-bottom: none;
+}
+
+#result {
+  margin: 15px auto;
+  font-size: 2rem;
+}
+
+#new-game {
+  background-color: #ff2e63;
+  padding: 10px 30px;
+  border: none;
+  font-size: 1.3rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
