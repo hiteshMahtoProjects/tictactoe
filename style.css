@@ -80,7 +80,7 @@ body {
   grid-template-rows: repeat(3, 1fr);
   height: 275px;
   width: 275px;
-  margin: 55px auto;
+  margin: 30px auto;
   font-family: var(--board-font);
   /* border: 2px solid white; */
 }
